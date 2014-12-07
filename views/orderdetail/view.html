@@ -1,0 +1,31 @@
+<div class="container orderdetailContainer">
+    <div class="block bottomLine">
+        <div>
+            <span>订单</span>
+            <span  ng-bind="orderdetail.orderMark"></span>
+        </div>
+    </div>
+    <div class="block" ng-repeat="production in orderdetail.orderGoods">
+        <div class="orderName">
+            <div class="fRight">
+                    <p>订货量</p>
+                    <p><span ng-bind="production.orderNum"></span></p>
+            </div>
+            <div class="fLeft">
+                    <p>产品名称</p>
+                    <p><span ng-bind="production.productionName"></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <p>收货地址</p>
+        <p><span ng-bind="orderdetail.deliveryAddress"></span></p>
+    </div>
+    <div class="block">
+        <p>客户</p>
+        <p><span ng-bind="orderdetail.customer"></span></p>
+    </div>
+    <div class="block">
+        <p><button ng-click="historyBack()">返回</button></p>
+    </div>
+</div>

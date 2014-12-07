@@ -1,0 +1,24 @@
+<div class="container orderqueryContainer">
+    <div class="block">
+        <div class="col col1">订单号</div>
+        <div class="col col2">订单备注</div>
+        <div class="col col3">订单状态</div>
+    </div>
+    <div ng-repeat="orderList in orderLists" class="block blockOrderList">
+        <div class="col col1">
+            <span class="receipt" ng-show="orderList.orderState == 2">已收货</span>
+            <a ng-href="#/orderdetail/{{orderList.orderNum}}">{{orderList.orderNum}}</a>
+        </div>
+        <div class="col col2" ng-bind="orderList.orderMark"></div>
+        <div class="col col3" ng-bind="orderList.orderStateText" ng-click="handlerClick(orderList.orderState)"></div>
+    </div>
+    <div ng-show="showGoodsPosition" class="goodsPositionDialog">
+        <div class="closeGoodsPositionDialogBtn" ng-click="showGoodsPosition = !showGoodsPosition">关闭</div>
+        <ul>
+            <li ng-repeat="position in goodsPostions">
+                <span ng-bind="position.msg"></span>
+                <span ng-bind="position.time"></span>
+            </li>
+        </ul>
+    </div>
+</div>

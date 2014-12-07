@@ -1,0 +1,13 @@
+<div class="container makesuredeliveryContainer">
+    <div class="block bottomLine">
+        <div class="col col1">送货员</div>
+        <div class="col col2">订单号</div>
+        <div class="col col3"></div>
+    </div>
+    <div ng-repeat="orderList in orderLists">
+        <div class="col col1" ng-bind="orderList.deliveryBoy"></div>
+        <div class="col col2" ng-bind="orderList.orderNum"></div>
+        <div class="col col3"><input ng-model="orderCheckbox" type="checkbox" id="orderCheckbox{{$index}}" /><label for="orderCheckbox{{$index}}">勾选</label></div>
+    </div>
+    <div class="block sureBtnBlock"><button ng-click="sureBtnHandler()">确认收货</button></div>
+</div>
