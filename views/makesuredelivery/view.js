@@ -9,15 +9,20 @@ angular.module('mainApp.makesuredeliveryView',['ngRoute'])
     $scope.orderLists = [
         {
             'deliveryBoy':'送货员A',
-            'orderNum':'123456'
+            'orderNum':'123456',
         },
         {
             'deliveryBoy':'送货员B',
-            'orderNum':'123456'
+            'orderNum':'654321'
         }
     ];
+    $scope.selectedOrder = [];
+    $scope.$watch('orderLists|filter:{checked:true}',function(selectedOrderLists){
+        $scope.selectedOrder = selectedOrderLists.map(function(selectedOrder){
+            return selectedOrder.orderNum
+        })
+    },true);
     $scope.sureBtnHandler = function(){
-        alert('确认收货');
-        console.log($scope.orderCheckbox);
+        alert('确认收货的订单号：'+JSON.stringify($scope.selectedOrder));
     }
 })
