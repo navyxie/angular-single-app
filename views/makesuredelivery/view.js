@@ -5,7 +5,7 @@ angular.module('mainApp.makesuredeliveryView',['ngRoute'])
         templateUrl:'views/makesuredelivery/view.html',
         controller:'makesuredeliveryCtrl'
     });
-}]).controller('makesuredeliveryCtrl',function($scope,$routeParams,$window){
+}]).controller('makesuredeliveryCtrl',['$scope','$routeParams','$window',function($scope,$routeParams,$window){
     $scope.orderLists = [
         {
             'deliveryBoy':'送货员A',
@@ -25,4 +25,4 @@ angular.module('mainApp.makesuredeliveryView',['ngRoute'])
     $scope.sureBtnHandler = function(){
         alert('确认收货的订单号：'+JSON.stringify($scope.selectedOrder));
     }
-})
+}])
