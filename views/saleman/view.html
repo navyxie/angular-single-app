@@ -1,39 +1,41 @@
 <div class="container makeOrderContainer">
     <div class="block bottomLine">
-        <div>
+        <div class="searchHeader">
             <input type="text" ng-model="searchText" placeholder="模糊搜索产品">
             <button ng-click="searchHandler()">搜索</button>
         </div>
-        <div>
+        <div class="searchOrderMark">
             <span>订单</span>
             <input  ng-model="orderMark" placeholder="订单备注"/>
         </div>
     </div>
-    <div class="block">
-        <div class="orderName">
-            <div class="fRight">
-                    <p>订货量</p>
-                    <p><input ng-model="orderNum" /></p>
-            </div>
-            <div class="fLeft">
-                    <p>产品名称</p>
-                    <p><input ng-model="productionName" /></p>
+    <div class="orderContent">
+        <div class="block">
+            <div class="orderName">
+                <div class="fRight">
+                        <p>订货量</p>
+                        <p><input ng-model="orderNum" /></p>
+                </div>
+                <div class="fLeft">
+                        <p>产品名称</p>
+                        <p><input ng-model="productionName" /></p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="block">
-        <p>收货地址</p>
-        <p><input ng-model="deliveryAddress" /></p>
-    </div>
-    <div class="block">
-        <p>客户</p>
-        <p><input ng-model="customer" /></p>
-    </div>
-    <div class="block">
-        <p>发货日期</p>
-        <p><input ng-model="deliveryDate"  type="date" /></p>
-    </div>
-    <div class="block">
-        <p><button ng-click="makeOrderBtn()">下单</button></p>
+        <div class="block">
+            <p>收货地址</p>
+            <p><input ng-model="deliveryAddress" /></p>
+        </div>
+        <div class="block">
+            <p>客户</p>
+            <p><input ng-model="customer" /></p>
+        </div>
+        <div class="block deliveryDateBlock">
+            <p>发货日期</p>
+            <p><input ng-model="deliveryDate"  type="date" /></p>
+        </div>
+        <div class="block sureBtnblock">
+            <p><button class="btn sureBtn" ng-click="makeOrderBtn()">下单</button></p>
+        </div>
     </div>
 </div>

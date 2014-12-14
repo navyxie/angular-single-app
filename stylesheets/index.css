@@ -1,10 +1,35 @@
 html,body{max-width:640px;margin:auto;}
-.makeOrderContainer .orderName,.orderdetailContainer .orderName{overflow:hidden;}
+.container{padding:10px;}
+.makeOrderContainer .orderName,.orderdetailContainer .orderName,.makeOrderContainer .orderNameTitle,.orderdetailContainer .orderNameTitle{overflow:hidden;padding:10px 0;border-bottom:1px dashed #d1d1d1;}.makeOrderContainer .orderName .fRight,.orderdetailContainer .orderName .fRight,.makeOrderContainer .orderNameTitle .fRight,.orderdetailContainer .orderNameTitle .fRight{width:33%;}
+.makeOrderContainer .orderName .fLeft,.orderdetailContainer .orderName .fLeft,.makeOrderContainer .orderNameTitle .fLeft,.orderdetailContainer .orderNameTitle .fLeft{width:65%;}
+.makeOrderContainer .orderNameTitle,.orderdetailContainer .orderNameTitle{border-bottom:none;padding:3px 0;}
+.makeOrderContainer .deliveryAddressBlock,.orderdetailContainer .deliveryAddressBlock{margin:10px 0;}
 .orderqueryContainer .block,.makesuredeliveryContainer .block{overflow:hidden;}
 .orderqueryContainer .blockOrderList,.makesuredeliveryContainer .blockOrderList{padding:5px 0;}
 .orderqueryContainer .col,.makesuredeliveryContainer .col{display:inline-block;width:32%;margin-right:1%;float:left;text-align:center;}
-.orderqueryContainer .col1,.makesuredeliveryContainer .col1{position:relative;}.orderqueryContainer .col1 .receipt,.makesuredeliveryContainer .col1 .receipt{position:absolute;top:0;left:0;background:green;color:#fff;}
-.bottomLine{border-bottom:1px solid #333;padding-bottom:3px;margin-bottom:3px;}
+.orderqueryContainer .col1,.makesuredeliveryContainer .col1{position:relative;}.orderqueryContainer .col1 .receipt,.makesuredeliveryContainer .col1 .receipt{position:absolute;top:-15px;left:0;background:green;color:#fff;}
+.orderqueryContainer .col1 a,.makesuredeliveryContainer .col1 a{text-decoration:underline;color:green;}
+.orderqueryContainer .blockOrderList,.makesuredeliveryContainer .blockOrderList{padding:16px 0;border-bottom:1px dashed #d1d1d1;}
+.orderqueryContainer .clickClass,.makesuredeliveryContainer .clickClass{text-decoration:underline;color:green;}
+.bottomLine{border-bottom:1px solid #333;padding-bottom:6px;margin-bottom:6px;}
 .goodsPositionDialog{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(0, 0, 0, 0.8);color:#fff;}.goodsPositionDialog ul{padding:30px 10px;}
-.goodsPositionDialog .closeGoodsPositionDialogBtn{position:absolute;right:0;top:0;}
+.goodsPositionDialog li{padding:5px 0;}
+.goodsPositionDialog .closeGoodsPositionDialogBtn{position:absolute;right:0;top:10;padding:10px;}
 .makesuredeliveryContainer{position:relative;}.makesuredeliveryContainer .sureBtnBlock{position:fixed;bottom:0;text-align:center;width:100%;left:0;}
+.makesuredeliveryContainer .blockMakesuredelivery{border-bottom:1px dashed #d1d1d1;height:36px;line-height:36px;}.makesuredeliveryContainer .blockMakesuredelivery label{vertical-align:14px;margin-left:3px;}
+input{border:1px solid #D1D1D1;height:36px;line-height:36px;text-indent:5px;}
+.link{margin:10px 16px 0 0;height:32px;line-height:32px;padding:6px 10px;border:1px solid #D1D1D1;text-align:center;background:#F5F5F5;background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f5f5f5));background:-moz-linear-gradient(top, #ffffff 15%, #f5f5f5 50%, #f0f0f0);border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;-moz-box-shadow:0 0 5px #ddd;-webkit-box-shadow:0 0 5px #ddd;box-shadow:0 0 5px #ddd;}.link a{font-size:16px;color:#005aa0;display:inline-block;width:100%;height:100%;}
+.searchHeader{margin-bottom:10px;}.searchHeader input{width:80%;}
+.searchHeader button{width:15%;margin-left:1%;height:38px;line-height:38px;border:1px solid #D1D1D1;text-align:center;background:#F5F5F5;background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f5f5f5));background:-moz-linear-gradient(top, #ffffff 15%, #f5f5f5 50%, #f0f0f0);border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;-moz-box-shadow:0 0 5px #ddd;-webkit-box-shadow:0 0 5px #ddd;box-shadow:0 0 5px #ddd;}
+.searchOrderMark input{width:80%;}
+.searchOrderMark span{width:15%;margin-right:1%;display:inline-block;}
+.orderContent input{width:97%;margin-top:5px;}
+.orderContent .orderName .fRight,.orderContent .orderName .fLeft{width:48%;}.orderContent .orderName .fRight input,.orderContent .orderName .fLeft input{width:93%;}
+.orderContent .deliveryDateBlock input{width:auto;}
+.orderContent .sureBtnblock{text-align:center;}
+.btn{height:38px;line-height:38px;border:1px solid #D1D1D1;text-align:center;background:#F5F5F5;background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f5f5f5));background:-moz-linear-gradient(top, #ffffff 15%, #f5f5f5 50%, #f0f0f0);border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;-moz-box-shadow:0 0 5px #ddd;-webkit-box-shadow:0 0 5px #ddd;box-shadow:0 0 5px #ddd;}
+.sureBtn{width:96%;margin-top:10px;background:#E4393C;color:#fff;font-size:16px;}
+.p1{padding:5px 0;color:#000;}
+.p2{color:#666;}
+.registrationInfomationContainer .bottomLine{text-align:center;}
+.registrationInfomationContainer input{width:97%;}

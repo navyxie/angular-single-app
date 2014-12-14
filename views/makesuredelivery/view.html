@@ -4,10 +4,12 @@
         <div class="col col2">订单号</div>
         <div class="col col3"></div>
     </div>
-    <div class="block" ng-repeat="orderList in orderLists">
+    <div class="block blockMakesuredelivery" ng-repeat="orderList in orderLists">
         <div class="col col1" ng-bind="orderList.deliveryBoy"></div>
-        <div class="col col2" ng-bind="orderList.orderNum"></div>
+        <div class="col col2">
+            <a ng-href="#/orderdetail/{{orderList.orderNum}}" ng-bind="orderList.orderNum"></a>
+        </div>
         <div class="col col3"><input value="orderList.orderNum" ng-model="orderList.checked" type="checkbox" id="orderCheckbox{{$index}}" /><label for="orderCheckbox{{$index}}">勾选</label></div>
     </div>
-    <div class="block sureBtnBlock"><button ng-click="sureBtnHandler()">确认收货</button></div>
+    <div class="block sureBtnBlock"><button class="btn sureBtn" ng-click="sureBtnHandler()" ng-bind="sureBtnText"></button></div>
 </div>

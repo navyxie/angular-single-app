@@ -1,11 +1,19 @@
 'use strict';
 angular.module('mainApp.makesuredeliveryView',['ngRoute'])
 .config(['$routeProvider',function($routeProvider){
-    $routeProvider.when('/makesuredelivery',{
+    $routeProvider.when('/makesuredelivery/:type',{
         templateUrl:'views/makesuredelivery/view.html',
         controller:'makesuredeliveryCtrl'
     });
 }]).controller('makesuredeliveryCtrl',['$scope','$routeParams','$window',function($scope,$routeParams,$window){
+    var type = $routeParams.type;
+    $scope.sureBtnText = "确认收货";
+    $scope.ajaxUrl = "";
+    if(type == 1){
+        //关联订单
+        $scope.sureBtnText = "确认";
+        $scope.ajaxUrl = "";
+    }
     $scope.orderLists = [
         {
             'deliveryBoy':'送货员A',
@@ -23,6 +31,6 @@ angular.module('mainApp.makesuredeliveryView',['ngRoute'])
         })
     },true);
     $scope.sureBtnHandler = function(){
-        alert('确认收货的订单号：'+JSON.stringify($scope.selectedOrder));
+        alert('订单号：'+JSON.stringify($scope.selectedOrder));
     }
 }])
