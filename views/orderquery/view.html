@@ -6,7 +6,7 @@
     </div>
     <div ng-repeat="orderList in orderLists" class="block blockOrderList">
         <div class="col col1">
-            <span class="receipt"  ng-show="orderList.orderState == 2">已收货</span>
+            <span class="receipt"  ng-show="orderList.orderState == 2">√</span>
             <a ng-href="#/orderdetail/{{orderList.orderNum}}">{{orderList.orderNum}}</a>
         </div>
         <div class="col col2" ng-bind="orderList.orderMark"></div>
